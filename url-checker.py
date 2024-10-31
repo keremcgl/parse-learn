@@ -42,7 +42,7 @@ while True:
     link_start = equals_sign_pos + 1
     
     # Bağlantının yanındaki tırnak işaretlerinin konumunu buluyoruz. strip sayesinde tırnak öncesi boşlukları atlayıp bir sonraki karaktere bakabiliyoruz.
-    quote_char = response.text[link_start]
+    quote_char = response.text[link_start].strip()
     if quote_char not in ('"', "'"):
         startpos = endpos
         continue
